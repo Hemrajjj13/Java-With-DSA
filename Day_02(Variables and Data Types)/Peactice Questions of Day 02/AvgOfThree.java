@@ -11,7 +11,7 @@ public class AvgOfThree {
             System.out.println("Enter value of c :");
             int c = sc.nextInt();
             int sum = a + b + c;
-            int Avg = sum / 3;
+            double Avg = sum / 3.0;
             System.out.println("Average is :"+Avg);
     }
 }

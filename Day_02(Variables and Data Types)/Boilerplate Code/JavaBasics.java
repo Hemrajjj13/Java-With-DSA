@@ -1,5 +1,5 @@
-punlic class JavaBasics {
-    public static void main(Strin args[]) {
+public class JavaBasics {
+    public static void main(String args[]) {
 
 
         
