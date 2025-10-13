@@ -1,2 +1,3 @@
-System.out.println("Enter a Number");
-        // int n = sc.nextInt();
+static int sum (int a, int b) {
+    //     return a + b;
+    // }
