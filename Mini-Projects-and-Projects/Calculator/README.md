@@ -25,6 +25,3 @@ It performs basic arithmetic operations — addition, subtraction, multiplicatio
 4. The loop continues until the user types **`x`** or **`X`** to exit.
 
 ---
-
-## 💻 Example Run
-
