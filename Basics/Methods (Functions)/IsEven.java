@@ -14,7 +14,7 @@ public class IsEven {
             return true;
         }
         else {
-            System.out.println(num + "is Not Even");
+            System.out.println(num + " is odd");
             return false;
         }
         
