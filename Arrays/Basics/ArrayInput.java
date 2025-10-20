@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Arrays;
 
 public class ArrayInput {
     public static void main(String[] args) {
@@ -10,21 +11,33 @@ public class ArrayInput {
         arr[2] = 231;
         arr[3] = 2323;
         arr[4] = 2;
-        System.err.println(arr[3]);
+        // System.err.println(arr[3]);
 
-        // for(int i = 0; i < arr.length; i++ ) {
-        //     arr[i] = sc.nextInt();
-        // }
+        for(int i = 0; i < arr.length; i++ ) {
+            arr[i] = sc.nextInt();
+        }
         // for(int i = 0; i < arr.length; i++ ) {
         //     System.out.print(arr[i]+" ");
         // }
-        String[] arr1 = new String[6];
-        for(int i = 0; i < arr1.length; i++ ) {
-            arr1[i] = sc.next();
-        }
-        arr1[3] = "Hemraj";// Modify
-        for(int i = 0; i < arr1.length; i++ ) {
-            System.out.print(arr1[i]+" ");
-        }
+
+        //another method 
+        // for (int num : arr) {//for every element inarray, print the element
+        //     System.out.print(num + " ");// here num represents element ot the array
+        // }
+
+        // Another Method to print Array 
+        System.out.println(Arrays.toString(arr));
+
+
+        // Array of  objects 
+
+        // String[] arr1 = new String[6];
+        // for(int i = 0; i < arr1.length; i++ ) {
+        //     arr 1[i] = sc.next();
+        // }
+        // arr1[3] = "Hemraj";// Modify
+        // for(int i = 0; i < arr1.length; i++ ) {
+        //     System.out.print(arr1[i]+" ");
+        // }
     }      
 }

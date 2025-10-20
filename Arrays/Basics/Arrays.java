@@ -6,6 +6,11 @@ public class Arrays {
         int b[];//declaeation
         b = new int[10];//intialisation: object is being created in heap memory
 
+        char[] bool = new char[5];
+        System.out.println(bool[1]+ "Empty I Guess"); 
+        System.out.println(bool[3]+ "Empty I Guess"); 
+        System.out.println(bool[2]+ "Empty I Guess"); 
+
     }
     
 }

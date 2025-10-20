@@ -12,14 +12,14 @@ public class Largest {
             }
             
         }
-        System.out.println("Samllest value is :" + smallest);
+        System.out.println("Smallest value is :" + smallest);
         return largest;
         
     }
     public static void main(String[] args) {
         int numbers[] = {0, -111, -100, -101, 2, 3, 39, 5, 4, 11, 6, 34};
 
-        System.out.println("Lrgest numbers is : " + getLargest(numbers));
+        System.out.println("Largest numbers is : " + getLargest(numbers));
 
     }
 }

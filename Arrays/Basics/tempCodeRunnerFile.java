@@ -1,6 +1,3 @@
-for(int i = 0; i < arr.length; i++ ) {
-        //     arr[i] = sc.nextInt();
-        // }
-        // for(int i = 0; i < arr.length; i++ ) {
-        //     System.out.print(arr[i]+" ");
+ // for (int num : arr) {//for every element inarray, print the element
+        //     System.out.print(num + " ");// here num represents element ot the array
         // }
