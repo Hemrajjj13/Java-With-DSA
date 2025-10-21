@@ -32,7 +32,7 @@ public class LinearSearch {
         if (id == -1) {
             System.out.println("Not Found !");
         }else {
-            System.out.println("Item is available : "+id);
+            System.out.println("Item is available : "+ id);
         }
     }
 }
