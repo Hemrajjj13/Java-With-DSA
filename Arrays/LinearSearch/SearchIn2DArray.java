@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SearchIn2DArray {
     public static void main(String[] args) {
         int[][] arr = {
@@ -7,10 +9,35 @@ public class SearchIn2DArray {
             {18, 12}
         };
         int target = 34;
-        System.out.println(arr, target);
+        int[] ans = search(arr, target);
+        System.out.println(Arrays.toString(ans));
+        int max = maxNum(arr);
+        System.out.println("Maximum element of the array :"+ max);
     }
 
-    static int search()
+    static int[] search(int[][] arr, int target) {
+        for (int row = 0; row < arr.length; row++) {
+            
+            for (int col = 0; col < arr[row].length; col++) {
+                if (target == arr[row][col]) {
+                    return new int[]{row, col};
+                }
+            }
+        }return new int[]{-1, -1};
+    }
+
+    static int maxNum(int[][] arr) {
+        int max = Integer.MIN_VALUE;
+        for (int row = 0; row < arr.length; row++) {
+            
+            for (int col = 0; col < arr[row].length; col++) {
+                if (max <= arr[row][col]) {
+                    max = arr[row][col];
+                    
+                }
+            }
+        }return max;
+    }
 
 
 }
