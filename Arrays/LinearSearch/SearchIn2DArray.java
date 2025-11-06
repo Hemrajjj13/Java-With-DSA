@@ -14,7 +14,7 @@ public class SearchIn2DArray {
         int max = maxNum(arr);
         System.out.println("Maximum element of the array :"+ max);
     }
-
+    //Search a element in 2d array
     static int[] search(int[][] arr, int target) {
         for (int row = 0; row < arr.length; row++) {
             
@@ -26,6 +26,7 @@ public class SearchIn2DArray {
         }return new int[]{-1, -1};
     }
 
+    // to find maximum number from 2d array
     static int maxNum(int[][] arr) {
         int max = Integer.MIN_VALUE;
         for (int row = 0; row < arr.length; row++) {
@@ -33,7 +34,7 @@ public class SearchIn2DArray {
             for (int col = 0; col < arr[row].length; col++) {
                 if (max <= arr[row][col]) {
                     max = arr[row][col];
-                    
+                    break;
                 }
             }
         }return max;
