@@ -4,7 +4,7 @@ Given the integer day denoting the day number, print on the screen which day of 
 
 Ensure only the 1st letter of the answer is capitalised.
 */
-public class Three {
+public class A2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter day:");

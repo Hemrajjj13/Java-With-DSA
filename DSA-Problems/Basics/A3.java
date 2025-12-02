@@ -8,7 +8,7 @@ Grade D if marks >= 35
 Fail, otherwise.
 */
 
-public class Two {
+public class A3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
