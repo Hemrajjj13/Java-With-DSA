@@ -9,7 +9,7 @@ public class A14 {
         double num = sc.nextDouble();
 
         double dollars = num * 0.011;
-        System.out.println(dollars);
+        System.out.println(dollars + "$");
         
     }
 }
