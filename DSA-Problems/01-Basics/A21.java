@@ -4,16 +4,15 @@ Area Of Isosceles Triangle
 */
 public class A21 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        int b = 5;
+        int height = 20;
 
-        System.out.print("Enter base: ");
-        int base = sc.nextInt();
-        System.out.print("Enter height: ");
-        int height = sc.nextInt();
-
-        double area = 0.5 * base * height;
+        double area = 0.5 * b * height;
         System.out.println("Area Of Isosceles Triangle: " + area);
 
-        sc.close();
+        // If using equal sides a and base b (no height given):
+        int a = 5;
+        double area1 = (b / 4.0) * Math.sqrt(4 * (a*a) - (b*b));
+        System.out.println("Area Of Isosceles Triangle (no height): " + area1);
     }
 }
