@@ -1,11 +1,11 @@
 import java.util.*;
-public class Paaterns {
+public class Patterns {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a Number: ");
         int n = sc.nextInt();
         
-        pattern19(n);
+        pattern22(n);
     }
 
     public static void pattern14(int n) {
@@ -92,14 +92,10 @@ public class Paaterns {
             System.out.println();
         }
         for (int i = 1; i <= n; i++) {
-            
-            // int stars = n - i;
             // stars
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
-
-            // int spaces = i * 2;
             // spaces
             for (int j = 0; j < (n*2-i*2); j++) {
                 System.out.print(" ");
@@ -112,6 +108,72 @@ public class Paaterns {
         }
     }
 
+    public static void pattern20(int n) {
+        for (int i = 1; i <= n; i++) {
+            // stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            // spaces
+            for (int j = 0; j < (n*2-i*2); j++) {
+                System.out.print(" ");
+            }
+            // stars
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 1; i < n; i++) {
+            
+            int stars = n - i;
+            // stars
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
 
+            int spaces = i * 2;
+            // spaces
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+            // stars
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
     
+    public static void pattern21(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == 1 || j == 1 || i == n || j == 4) {
+                    System.out.print("*");
+                }
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void pattern22(int n) {
+        for (int i = 0; i < 2*n-1; i++){
+            for (int j = 0; j < 2*n-1; j++) {
+                int top = i;
+                int left = j;
+                int right = (2*n - 2) - j;
+                int bottom = (2*n -2) - i;
+
+                System.out.print(n - min(min(top, bottom), min(left, right)) + " ");
+
+            }
+            System.out.println();
+        }
+    }
+
+    public static int min(int num1, int num2) {
+        if (num1 > num2) return num2;
+        else return num1;
+    }
 }
