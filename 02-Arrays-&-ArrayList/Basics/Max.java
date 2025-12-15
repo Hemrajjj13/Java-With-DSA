@@ -13,6 +13,13 @@ public class Max {
     }
 
     static int MaxItem(int[] arr) {
+        if (end > start) {
+            return -1;
+        }
+        if (arr.length == 0 || arr == null) {
+            return -1;
+        }
+
         int max = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > max) {
@@ -22,6 +29,12 @@ public class Max {
         return max;
     }
     static int MaxItemInRange(int[] arr, int start, int end) {
+        if (end > start) {
+            return -1;
+        }
+        if (arr.length == 0 || arr == null) {
+            return -1;
+        }
         int max = arr[start];
         for (int i = start; i <= end; i++) {
             if (arr[i] > max) {
@@ -32,6 +45,13 @@ public class Max {
     }
 
     static int[] ReverseArray(int[] arr) {
+        if (end > start) {
+            return -1;
+        }
+        if (arr.length == 0 || arr == null) {
+            return -1;
+        }
+
         int start = 0, end = arr.length-1;
         while (start < end) {
             int temp = arr[start];
