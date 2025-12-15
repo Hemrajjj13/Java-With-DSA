@@ -5,6 +5,11 @@ public class Max {
         int[] arr = {1, 2, 33, 4, 5, 6, 7, 8, 9, 10, 45, 31};
         System.out.println(MaxItem(arr));
         System.out.println(MaxItemInRange(arr, 2, 8));
+
+        int[] revArr = ReverseArray(arr);
+        for(int num: arr) {
+            System.out.print(num + " ");
+        }
     }
 
     static int MaxItem(int[] arr) {
@@ -24,5 +29,17 @@ public class Max {
             }
         }
         return max;
+    }
+
+    static int[] ReverseArray(int[] arr) {
+        int start = 0, end = arr.length-1;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        return arr;
     }
 }
