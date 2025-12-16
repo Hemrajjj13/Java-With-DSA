@@ -1,6 +1,7 @@
+import java.util.*;
 // https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/
 
-public class EvenNumberOfDigits {
+public class EvenDigits {
     public static void main(String[] args) {
         int[] nums = {12, 345, 2, 6, 7896};
         int count = findNumbers(nums);
@@ -37,3 +38,22 @@ public class EvenNumberOfDigits {
         return count;
     }
 }
+
+
+// approach 2
+// public int findNumbers(int[] nums) {
+//     int count = 0;
+
+//     for (int i = 0; i < nums.length; i++) {
+//         int evencount=0;
+
+//         while (nums[i] > 0) {
+//             nums[i] = nums[i] / 10;
+//             evencount++;
+//         }
+//         if(evencount % 2 == 0) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }

@@ -1,20 +1,4 @@
 public class LinearSearch {
-    public static int linearSearch(int numbers[], int key) {
-        for(int i=0; i<numbers.length; i++) {
-            if(numbers[i]==key) {
-                return i;
-            }
-        }
-        return -1;
-    }
-    public static int linearSearch(String menuStrings[], String itemString) {
-        for(int i=0; i<menuStrings.length; i++) {
-            if(menuStrings[i] == itemString) {
-                return i;
-            }
-        }
-        return -1;
-    }
     public static void main(String[] args) {
         int numbers[] = {2, 4, 6, 8, 10, 12, 14, 16};
         String menu[] = {"Samosa", "Idli", "Sandwich", "Poha"};
@@ -35,4 +19,27 @@ public class LinearSearch {
             System.out.println("Item is available : "+ id);
         }
     }
+
+    // search int the array: return the index if item found
+    // otherwise if item not found return -1 
+    public static int linearSearch(int numbers[], int key) {
+        if (numbers.length == 0 || numbers == null) {
+            return -1;
+        }
+        for(int i=0; i<numbers.length; i++) {
+            if(numbers[i]==key) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static int linearSearch(String menuStrings[], String itemString) {
+        for(int i=0; i<menuStrings.length; i++) {
+            if(menuStrings[i] == itemString) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
 }
