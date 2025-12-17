@@ -9,6 +9,8 @@ public class InterMediate {
         System.out.println("Average Of N Numbers: " + avgOfNNums(num));
         System.out.println("Discount Of Product: " + discount(200, 20));
         System.out.println("Distance Between Two Points: " + distance(5, 10, 30, 20));
+        System.out.println("Commission Percentage: " + commissionPercentage(5000, 750) + "%");
+
 
     } 
     
@@ -20,7 +22,6 @@ public class InterMediate {
         }
         return fact;
     }
-
     // Calculate Electricity Bill
     static double eleBill () {
         int prevMeterReading = 2350;
@@ -42,16 +43,19 @@ public class InterMediate {
         }
         return (double)total / n;
     }
-
     // Discount Of Product
     static double discount(int price, int discountPercentage) {
         return price - (price * discountPercentage / 100);
-    }
-    
+    }   
     // Distance Between Two Points
     static double distance(double x1, double y1, double x2, double y2) {
         double dx = x2 - x1;
         double dy = y2 - y1;
         return Math.sqrt(dx * dx + dy * dy);
     }
+    static double commissionPercentage(double totalSales, double commissionAmount) {
+        return (commissionAmount / totalSales) * 100;
+    }
+
+
 }
