@@ -16,13 +16,10 @@ public class Main {
             {82, 84, 76, 85, 90}
         };
         int[] totalMs = totalMarks(marks); // get the total marks of each student
-        double percentage[] = percentage(totalMs, marks);
-        printAllData(rollNo, names, totalMs, percentage);
-
-        boolean[] pf = passFail(marks);
-        for(int i = 0; i < pf.length; i++) {
-            System.out.print(pf[i] + " ");
-        }
+        double percentage[] = percentage(totalMs, marks); // get the percentage of all students
+        boolean[] isPass = passFail(marks); // to check if the students is passed in all subjects or not 
+        char[] grade = grades(percentage, isPass);
+        printAllData(rollNo, names, totalMs, percentage, grade); // prints the complete data of students 
     }
 
     public static int[] totalMarks(int[][] marks) {
@@ -59,15 +56,39 @@ public class Main {
         return percentage;
     }
 
-    static void printAllData(int[] rollNo, String[] names, int[] totalMs, double[] percentage) {
+    static char[] grades(double[] percentage, boolean[] isPass) {
+        char[] grades = new char[isPass.length];
+
+        for (int i = 0; i < percentage.length; i++) {
+            if (percentage[i] >= 90 && isPass[i]) {
+                grades[i] = 'A';
+            }
+            else if (percentage[i] >= 80 && isPass[i]) {
+                grades[i] = 'B';
+            }
+            else if (percentage[i] >= 70 && isPass[i]) {
+                grades[i] = 'C';
+            }
+            else if (percentage[i] >= 60 && isPass[i]) {
+                grades[i] = 'D';
+            }
+            else{
+                grades[i] = 'F';
+            }
+        }
+        return grades;
+    }
+
+    static void printAllData(int[] rollNo, String[] names, int[] totalMs, double[] percentage, char[] grade) {
         System.out.println("Total Data of all students:");
         for (int i = 0; i < totalMs.length; i++) {
             System.out.printf(
-                "%d. %-10s Total: %d Percentage: %.2f%n",
+                "%d. %-10s Total: %d Percentage: %.2f%n Grade: %c%n",
                 rollNo[i],
                 names[i],
                 totalMs[i],
-                percentage[i]
+                percentage[i],
+                grade[i]
             );
         }
     }
