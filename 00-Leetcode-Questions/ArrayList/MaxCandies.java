@@ -1,4 +1,4 @@
-package ArrayList;
+// https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
 
 import java.util.ArrayList;
 import java.util.List;
