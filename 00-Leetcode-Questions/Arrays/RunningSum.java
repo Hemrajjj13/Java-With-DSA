@@ -11,13 +11,12 @@ public class RunningSum {
     }
 
     static int[] runningSum(int[] nums) {
-        int rSum = 0;
-        int sum[] = new int[nums.length];
-        sum[0] = nums[0];
+        int sum = 0;
+        int[] ans = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
-            rSum += nums[i];
-            sum[i] = rSum;
+            sum += nums[i];
+            ans[i] = sum;
         }
-        return sum;
+        return ans;
     }
 }
